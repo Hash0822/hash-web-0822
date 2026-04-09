@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>과제</title>
+    </head>
+    <body>
+        <input id="input_number" type="score"/>
+        <button id="btn" type="button">확인</button>
+        <div id="print"></div>
+    </body>
+</html>
+<script>
+document.getElementById("btn").onclick=function(){
+        let score=document.getElementById("input_number").value;
+        let result=null;
+        
+        switch(true){
+            case(score>=90 && score<=100):
+            result="A";
+            break;
+        case(score>=80 && score<=90):
+            result="B";
+            break;
+        case(score>=70 && score<=80):
+            result="C";
+            break;
+        case(score>=60 && score<=70):
+            result="D";
+            break;
+        case(score>=0 && score<=60):
+            result="E";
+            break;
+        default: 
+            result="올바른 점수(0~100)를 입력하세요.";
+        }
+        document.getElementById("print").textContent=result;
+    };
+</script>
+</html>
